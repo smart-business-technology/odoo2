@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
+
         <template id="report_custom_invoice">
             <t t-call="web.html_container">
-                <t t-call="web.basic_layout">
+                <t t-call="web.external_layout">
                     <t t-foreach="docs" t-as="o">
-                        <div class="page" >
+                        <div class="page" dir="rtl">
                             <style type="text/css">
                                 @font-face {
                                 font-family: 'Tajawal';
@@ -22,20 +23,15 @@
 
                                 body {
                                 position: relative;
-                                width: 100%;
-                                height: 100%;
-                                margin: 0 !important;
+                                width: 21cm;
+                                height: 29.7cm;
+                                margin: 0 auto;
                                 color: #555555;
                                 background: #FFFFFF;
+                                font-family: Tajawal !important;
                                 font-size: 14px;
                                 }
-
-                                div.vertical-line{
-                                  width: 0px;
-                                  height: 100%;
-                                  float: left;
-                                  border: 1px inset #00B0F0;
-                                }
+                                
                                 #details {
                                 margin-bottom: 30px;
                                 }
@@ -45,23 +41,6 @@
                                 text-align: right;
                                 }
 
-                                .vertical_text {
-                                    writing-mode: vertical-rl !important;
-                                    text-orientation: mixed !important;
-                                    color: #2683C6 !important;
-                                    width: 0px;
-                                    height: 50%;
-                                    float: left;
-                                }
-
-                                div.vertical_text {
-                                    writing-mode: vertical-rl !important;
-                                    text-orientation: mixed !important;
-                                    color: #2683C6 !important;
-                                    width: 0px;
-                                    height: 50%;
-                                    float: left;
-                                }
 
                                 #details {
                                 margin-bottom: 50px;
@@ -72,26 +51,16 @@
                                 text-align: right;
                                 }
 
+
+
                                 #invoice {
                                 float: right;
                                 text-align: right;
                                 }
 
-                                #side {
-                                    position: absolute;
-                                    top: 0;
-                                    left: 0;
-
-                                    background: none;
-
-                                    /* Rotate from top left corner (not default) */
-                                    transform-origin: 0 0;
-                                    transform: rotate(90deg);
-                                }
-
                                 table {
                                     border: 1px solid #000;
-                                    margin: 10px 0px 0px 10px;
+                                    margin: 10px 0px 0px;
                                     width: 100%;
                                     float: left;
                                     border-spacing: 0px;
@@ -105,135 +74,136 @@
 
                                 table tr th {
                                     padding: 10px 0px;
-                                    background: #00B0F0;
-                                    color: #D9D9D9;
+                                    background: #002e46;
+                                    color: #ffffff;
+                                                                    
                                 }
 
-                                table tr td th{
-                                    border: 1px solid #000 !important;
+                                table tr td {
+                                    border-top: 1px solid #000;
                                     padding: 5px 0px;
                                 }
 
                             </style>
                             <body>
-                                <div>
-                                    <img src='/custom_printout_reports/static/src/img/invoice_header.JPG' style="width:125%; margin:0px 0px 0px 0px !important;" alt="invoice header"/>
+
+                            
+                            <div class="clearfix">
+                                <div id="company">
+                                    <img t-if="o.company_id.logo" t-att-src="image_data_uri(o.company_id.logo)" style="max-height: 45px;" alt="Logo"/>
+                                    <h2 class="name"><t t-esc="o.company_id.name"/></h2>
                                 </div>
-                                <!--<div class="vertical-line" style="height: 200px;"></div>-->
-                                <div  style="margin-top=60px !important; color:#00B0F0 !important">
-                                    <p  align="center" style='margin-left:0; margin-top: 25px !important; text-align:center color:#00B0F0'>
-                                        <b>
-                                            <i>
-                                                <u>
-                                                    <span style='font-size:20.0pt; line-height:120%; font-family:"Times New Roman",serif; color:#00B0F0'>
-                                                        Invoice
-                                                    </span>
-                                                </u>
-                                            </i>
-                                        </b>
-                                    </p>
-                                </div>
-                                <div id="details" class="clearfix" style="margin-left:5%">
-                                    <br id="invoice" style="display:inline"/>
-                                        <div class="row">
-                                              <div class="col-6">
-                                                  <span><b>TO: </b></span> <t t-esc="o.partner_id.display_name"/>
-                                              </div>
-                                              <div class="col-6">
-                                                  <span><b>Invoice Number:</b></span> <t t-esc="o.name"/>
-                                              </div>
-                                        </div>
-                                        <br />
-                                        <div class="row">
-                                              <div class="col-6">
-                                                <span><b>Subject:</b></span> <t t-esc="o.payment_reference"/>
-                                              </div>
-                                              <div class="col-6">
-                                                <span><b>Invoice Date:</b></span> <t t-esc="o.invoice_date"/>
-                                              </div>
-                                        </div>
-                                </div>
-                                <div>
-                                    <table style="border: 1px solid black !important;">
-                                        <thead style="border: 1px solid black !important;">
-                                            <tr style="background-color:#00B0F0; color:#000; border: 1px solid black !important;">
-                                                <th>#REF</th>
-                                                <th>Item Description</th>
-                                                <th>Qty</th>
-                                                <th>Unit Price (USD)</th>
-                                                <th>Total Price (USD)</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody style="border: 1px solid black !important;">
-                                            <tr style="height: 40px !important; border: 1px solid black !important;">
-                                                    <td style="background-color:#D9D9D9"></td>
-                                                    <td style="background-color:#D9D9D9"></td>
-                                                    <td style="background-color:#D9D9D9"></td>
-                                                    <td style="background-color:#D9D9D9"></td>
-                                                    <td style="background-color:#D9D9D9"></td>
-                                            </tr>
-                                            <t t-foreach="o.invoice_line_ids" t-as="line">
-                                                <tr style="height: 40px !important; border: 1px solid black !important;">
-                                                    <td><t t-esc="line.product_id.id"/></td>
-                                                    <td><t t-esc="line.name"/> </td>
-                                                    <td><t t-esc="line.quantity"/> </td>
-                                                    <td><t t-esc="line.price_unit"/> </td>
-                                                    <td><span t-field="line.price_subtotal"/></td>
-                                                </tr>
-                                            </t>
-                                            <tr style="height: 40px !important; border: 1px solid black !important;">
-                                                    <td style="background-color:#D9D9D9"></td>
-                                                    <td style="background-color:#D9D9D9">SubTotal</td>
-                                                    <td style="background-color:#D9D9D9"></td>
-                                                    <td style="background-color:#D9D9D9"></td>
-                                                    <td style="background-color:#D9D9D9"> <span t-field="o.amount_untaxed"/></td>
-                                            </tr>
-                                            <tr style="height: 40px !important; border: 1px solid black !important;">
-                                                    <td style="background-color:#D9D9D9"></td>
-                                                    <td style="background-color:#D9D9D9">Discount</td>
-                                                    <td style="background-color:#D9D9D9"></td>
-                                                    <td style="background-color:#D9D9D9"></td>
-                                                    <td style="background-color:#D9D9D9">0.0</td>
-                                            </tr>
-                                            <tr style="height: 40px !important; border: 1px solid black !important;">
-                                                    <td style="background-color:#D9D9D9"></td>
-                                                    <td style="background-color:#D9D9D9">Total</td>
-                                                    <td style="background-color:#D9D9D9"></td>
-                                                    <td style="background-color:#D9D9D9"></td>
-                                                    <td style="background-color:#D9D9D9"><span t-field="o.amount_total"/></td>
-                                            </tr>
-                                            <tr style="height: 40px !important; border: 1px solid black !important;">
-                                                    <td style="background-color:#D9D9D9"></td>
-                                                    <td style="background-color:#D9D9D9">Paid</td>
-                                                    <td style="background-color:#D9D9D9"></td>
-                                                    <td style="background-color:#D9D9D9"></td>
-                                                    <td style="background-color:#D9D9D9"><span t-field="o.payment_state"/></td>
-                                            </tr>
-                                            <tr style="height: 40px !important; border: 1px solid black !important;">
-                                                    <td style="background-color:#D9D9D9"></td>
-                                                    <td style="background-color:#D9D9D9">Amount Due</td>
-                                                    <td style="background-color:#D9D9D9"></td>
-                                                    <td style="background-color:#D9D9D9"></td>
-                                                    <td style="background-color:#D9D9D9"><span t-field="o.amount_residual"/></td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                                <div class="footer o_background_footer">
-                                    <div class="text-center">
-                                        <ul class="list-inline" style="color:#00B0F0 !important;">
-                                            <li t-if="res_company.phone" class="list-inline-item"><i class="fa fa-phone" role="img" aria-label="Phone" title="Phone"/> <span t-field="res_company.phone"/></li>
-                                            <li t-if="res_company.email" class="list-inline-item"><i class="fa fa-at" role="img" aria-label="Email" title="Email"/> <span t-field="res_company.email"/></li>
-                                            <li t-if="res_company.website" class="list-inline-item"><i class="fa fa-globe" role="img" aria-label="Website" title="Website"/> <span t-field="res_company.website"/></li>
-                                            <li class="list-inline-item"><i class="fa fa-map-marker" role="img" aria-label="Address" title="Address"/> <span>Iraq, Baghdad, Ameerat ST.</span></li>
-                                        </ul>
+
+                            </div>
+
+                            <div><center>
+                                <h3>فــاتورة</h3>
+                                <h5 class="name"><b>الرقم الضريبي : </b><t t-esc="o.company_id.vat"/></h5>
+                            </center></div>
+
+
+                            <!--t t-if="o.is_rent">
+                                <div id="details" class="clearfix">
+                                    <div id="client">
+                                        <div class="to">Claim No</div>
+                                        <h2 class="name"><t t-esc="o.origin"/></h2>
                                     </div>
                                 </div>
+                            </t-->
+
+                            <div id="details" class="clearfix">
+                                <div id="invoice" style="display:inline">
+                                    <h6 class="name"><b>اسم العميل : </b><t t-esc="o.partner_id.name"/></h6>
+                                    <h6 class="name"><b>عنوان العميل : </b><t t-esc="o.partner_id.country_id.name"/>,<t t-esc="o.partner_id.state_id.name"/></h6>
+                                    <h6 class="name"><b>الرقم الضريبي : </b><t t-esc="o.partner_id.vat"/></h6>
+                                    <h6 class="name"><b>رقم الهاتف : </b><t t-esc="o.partner_id.phone"/></h6>
+                                </div>    
+                                <div id="client" style="background: #002e46;color: #ffffff;">
+                                        <h1><t t-esc="o.number"/></h1>
+                                        <div class="name">تاريخ الفاتورة :<t t-esc="o.date_invoice"/></div>
+                                </div>
+                            </div>
+
+                            <br/>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>الوصف</th>
+                                        <th>السعر</th>
+                                        <th>الضريبة</th>
+                                        <th>مبلغ الضريبة</th>
+                                        <th>الإجمالي</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <t t-foreach="o.invoice_line_ids" t-as="line">
+                                        <tr>
+                                            <td><t t-esc="line_index+1"/></td>
+                                            <td><t t-esc="line.name"/> </td>
+                                            <td><span t-field="line.price_subtotal"/></td>
+                                            <td><t t-esc="str(line.invoice_line_tax_ids.mapped('name')).replace('[','').replace(']','').replace('\'','')"/> </td>
+                                            <td><span t-field="line.price_tax"/></td>
+                                            <td><span t-field="line.price_total"/> </td>
+                                        </tr>
+                                    </t>
+                                </tbody>
+                                
+                            </table>
+                            <br />
+
+                    <div class="clearfix">
+                        <div id="client">
+                            <div t-attf-class="ml-auto">
+                                <table class="table table-sm" style="page-break-inside: avoid;">
+                                    <tr class="border-black o_subtotal" style="">
+                                        <td><strong>الإجمالي الفرعي</strong></td>
+                                        <td class="text-right">
+                                            <span t-field="o.amount_untaxed"/>
+                                        </td>
+                                    </tr>
+                                    
+                                    <tr style="">
+                                        <td><strong>مبلغ الضريبة</strong></td>
+                                        <td class="text-right">
+                                            <span t-field="o.amount_tax"/>
+                                        </td>
+                                    </tr>
+                                    
+                                    <tr class="border-black o_total">
+                                        <td><strong>الإجمالي</strong></td>
+                                        <td class="text-right">
+                                            <span t-field="o.amount_total"/>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <br />
+                    <br />
+                            <div id="details" class="clearfix">
+                                <div id="invoice">
+                                <h5>تفاصيل الحساب البنكي</h5>
+                                    <!--div class="name">Account Name : <t t-esc="o.partner_id.name"/></div-->
+                                    <h6 class="name"><b>اسم البنك : </b><t t-esc="o.partner_bank_id.bank_id.name"/></h6>
+                                    <h6 class="name"><b>العملة : </b><t t-esc="o.partner_bank_id.currency_id.name"/></h6>
+                                    <h6 class="name"><b>رقم الحساب : </b><t t-esc="o.partner_bank_id.acc_number"/></h6>
+                                    <h6 class="name"><b>العنوان/الفرع : </b><t t-esc="o.partner_bank_id.bank_id.city"/>,<t t-esc="o.partner_bank_id.bank_id.street"/></h6>
+                                    <h6 class="name"><b>كود البنك : </b><t t-esc="o.partner_bank_id.bank_id.bic"/></h6>
+                                    <h6 class="name"><b>رقم الايبان : </b><t t-esc="o.partner_bank_id.iban"/></h6>
+                                </div>
+                            </div>    
                             </body>
+
+
                         </div>
                     </t>
                 </t>
-            </t>
+                </t>
         </template>
+
     </data>
-</odoo>
+
+</odoo>        
