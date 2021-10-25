@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="report_custom_quotation">
+            <t t-call="web.html_container">
+                <t t-call="web.basic_layout">
+                    <t t-foreach="docs" t-as="o">
+                        <div class="page" >
+                            <style type="text/css">
+                                @font-face {
+                                font-family: 'Tajawal';
+                                font-style: normal;
+                                font-weight: 400;
+                                src: url('/custom_printout_reports/static/src/fonts/tajawal-v3-arabic-regular.eot'); /* IE9 Compat Modes */
+                                src: local('Tajawal'), local('Tajawal-Regular'),
+                                url('/custom_printout_reports/static/src/fonts/tajawal-v3-arabic-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+                                url('/custom_printout_reports/static/src/fonts/tajawal-v3-arabic-regular.woff2') format('woff2'), /* Super Modern Browsers */
+                                url('/custom_printout_reports/static/src/fonts/tajawal-v3-arabic-regular.woff') format('woff'), /* Modern Browsers */
+                                url('/custom_printout_reports/static/src/fonts/tajawal-v3-arabic-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+                                url('/custom_printout_reports/static/src/fonts/tajawal-v3-arabic-regular.svg#Tajawal') format('svg'); /* Legacy iOS */
+                                }
+
+                                body {
+                                position: relative;
+                                width: 100%;
+                                height: 100%;
+                                margin: 0 !important;
+                                color: #555555;
+                                background: #FFFFFF;
+                                font-size: 14px;
+                                }
+
+                                div.vertical-line{
+                                  width: 0px;
+                                  height: 100%;
+                                  float: left;
+                                  border: 1px inset #00B0F0;
+                                }
+                                #details {
+                                margin-bottom: 30px;
+                                }
+
+                                #company {
+                                float: right;
+                                text-align: right;
+                                }
+
+                                .vertical_text {
+                                    writing-mode: vertical-rl !important;
+                                    text-orientation: mixed !important;
+                                    color: #2683C6 !important;
+                                    width: 0px;
+                                    height: 50%;
+                                    float: left;
+                                }
+
+                                div.vertical_text {
+                                    writing-mode: vertical-rl !important;
+                                    text-orientation: mixed !important;
+                                    color: #2683C6 !important;
+                                    width: 0px;
+                                    height: 50%;
+                                    float: left;
+                                }
+
+                                #details {
+                                margin-bottom: 50px;
+                                }
+
+                                #client {
+                                float: left;
+                                text-align: right;
+                                }
+
+                                #invoice {
+                                float: right;
+                                text-align: right;
+                                }
+
+                                #side {
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+
+                                    background: none;
+
+                                    /* Rotate from top left corner (not default) */
+                                    transform-origin: 0 0;
+                                    transform: rotate(90deg);
+                                }
+
+                                table {
+                                    border: 1px solid #000;
+                                    margin: 10px 0px 0px 10px;
+                                    width: 100%;
+                                    float: left;
+                                    border-spacing: 0px;
+                                }
+
+                                table tr th,
+                                table tr td {
+                                    border-right: 1px solid #000;
+                                    text-align: center;
+                                }
+
+                                table tr th {
+                                    padding: 10px 0px;
+                                    background: #00B0F0;
+                                    color: #D9D9D9;
+                                }
+
+                                table tr td th{
+                                    border: 1px solid #000 !important;
+                                    padding: 5px 0px;
+                                }
+
+                            </style>
+                            <body>
+                                <div>
+                                    <img src='/custom_printout_reports/static/src/img/invoice_header.JPG' style="width:125%; margin:0px 0px 0px 0px !important;" alt="invoice header"/>
+                                </div>
+                                <!--<div class="vertical-line" style="height: 200px;"></div>-->
+                                <div  style="margin-top=60px !important; color:#00B0F0 !important">
+                                    <p  align="center" style='margin-left:0; margin-top: 25px !important; text-align:center color:#00B0F0'>
+                                        <b>
+                                            <i>
+                                                <u>
+                                                    <span style='font-size:20.0pt; line-height:120%; font-family:"Times New Roman",serif; color:#00B0F0'>
+                                                        Quotation
+                                                    </span>
+                                                </u>
+                                            </i>
+                                        </b>
+                                    </p>
+                                </div>
+                                <div id="details" class="clearfix" style="margin-left:5%">
+                                    <br id="invoice" style="display:inline"/>
+                                        <div class="row">
+                                              <div class="col-6">
+                                                  <span><b>TO: </b></span> <t t-esc="o.partner_id.display_name"/>
+                                              </div>
+                                              <div class="col-6">
+                                                  <span><b>Quotation Number:</b></span> <t t-esc="o.name"/>
+                                              </div>
+                                        </div>
+                                        <br />
+                                        <div class="row">
+                                              <div class="col-6">
+                                                <span><b>Subject:</b>Quotation</span>
+                                              </div>
+                                              <div class="col-6">
+                                                <span><b>Quotation Date:</b></span> <t t-esc="o.date_order"/>
+                                              </div>
+                                        </div>
+                                </div>
+                                <div>
+                                    <p  align="left">
+                                        <b>
+                                            <span style='font-size:14px; line-height:120%; font-family:"Times New Roman", serif;'>
+                                            Dears,<br />
+                                             We thank you for your interest in SMART BUSSINES TECHNOLOGY
+                                             We are pleased to propose in response to your current requirement. We rely on our extensive experience all over the country; to supply and implement a system designed to meet your company’s needs.
+                                            <br /><br />
+                                             We hope our offer will meet your expectations and we are always available to serve your organization to the fullest of our ability.
+                                            <br /><br /><br />
+                                            Sincerely><br />
+                                                <span style="color:#00B0F0; font-size:20px;"><b>Smart Business Technology</b></span>
+                                            </span>
+                                        </b>
+                                    </p>
+                                </div>
+                                <div class="footer o_background_footer">
+                                    <div class="text-center">
+                                        <ul class="list-inline" style="color:#00B0F0 !important;">
+                                            <li t-if="res_company.phone" class="list-inline-item"><i class="fa fa-phone" role="img" aria-label="Phone" title="Phone"/> <span t-field="res_company.phone"/></li>
+                                            <li t-if="res_company.email" class="list-inline-item"><i class="fa fa-at" role="img" aria-label="Email" title="Email"/> <span t-field="res_company.email"/></li>
+                                            <li t-if="res_company.website" class="list-inline-item"><i class="fa fa-globe" role="img" aria-label="Website" title="Website"/> <span t-field="res_company.website"/></li>
+                                            <li class="list-inline-item"><i class="fa fa-map-marker" role="img" aria-label="Address" title="Address"/> <span>Iraq, Baghdad, Ameerat ST.</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div style="page-break-after: always;"/>
+                                <div>
+                                    <img src='/custom_printout_reports/static/src/img/invoice_header.JPG' style="width:125%; margin:0px 0px 0px 0px !important;" alt="invoice header"/>
+                                </div>
+                                <div  style="margin-top=100px !important; color:#00B0F0 !important">
+                                    <p style='margin-left:0; margin-top: 100px !important; color:#00B0F0'>
+                                        <b>
+                                            <i>
+                                                <u>
+                                                    <span style='font-size:20.0pt; line-height:120%; font-family:"Times New Roman",serif; color:#00B0F0'>
+                                                        <br /><br /> Commercial Offer: <br /><br /><br />
+                                                    </span>
+                                                </u>
+                                            </i>
+                                        </b>
+                                    </p>
+                                </div>
+                                <div>
+                                    <table style="border: 1px solid black !important;">
+                                        <thead style="border: 1px solid black !important;">
+                                            <tr style="background-color:#00B0F0; color:#000; border: 1px solid black !important;">
+                                                <th>#REF</th>
+                                                <th>Item Description</th>
+                                                <th>Qty</th>
+                                                <th>Unit Price (USD)</th>
+                                                <th>Total Price (USD)</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody style="border: 1px solid black !important;">
+                                            <tr style="height: 40px !important; border: 1px solid black !important;">
+                                                    <td style="background-color:#D9D9D9"></td>
+                                                    <td style="background-color:#D9D9D9"></td>
+                                                    <td style="background-color:#D9D9D9"></td>
+                                                    <td style="background-color:#D9D9D9"></td>
+                                                    <td style="background-color:#D9D9D9"></td>
+                                            </tr>
+                                            <t t-foreach="o.order_line" t-as="line">
+                                                <tr style="height: 40px !important; border: 1px solid black !important;">
+                                                    <td><t t-esc="line.product_id.id"/></td>
+                                                    <td><t t-esc="line.name"/> </td>
+                                                    <td><t t-esc="line.product_uom_qty"/> </td>
+                                                    <td><t t-esc="line.price_unit"/> </td>
+                                                    <td><span t-field="line.price_subtotal"/></td>
+                                                </tr>
+                                            </t>
+                                            <tr style="background-color:#00B0F0;">
+                                                <td></td>
+                                                <td>Service and Support</td>
+                                                <td  style="border-color:#00B0F0 !important;"></td>
+                                                <td  style="border-color:#00B0F0 !important;"></td>
+                                                <td  style="border-color:#00B0F0 !important;"></td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <tr style="height: 40px !important; border: 1px solid black !important;">
+                                                    <td style="background-color:#D9D9D9"></td>
+                                                    <td style="background-color:#D9D9D9">Total</td>
+                                                    <td style="background-color:#D9D9D9"></td>
+                                                    <td style="background-color:#D9D9D9"></td>
+                                                    <td style="background-color:#D9D9D9"> <span t-field="o.amount_untaxed"/></td>
+                                            </tr>
+                                            <tr style="height: 40px !important; border: 1px solid black !important;">
+                                                    <td style="background-color:#D9D9D9"></td>
+                                                    <td style="background-color:#D9D9D9">Discount</td>
+                                                    <td style="background-color:#D9D9D9"></td>
+                                                    <td style="background-color:#D9D9D9"></td>
+                                                    <td style="background-color:#D9D9D9">0.0</td>
+                                            </tr>
+                                            <tr style="height: 40px !important; border: 1px solid black !important;">
+                                                    <td style="background-color:#D9D9D9"></td>
+                                                    <td style="background-color:#D9D9D9">Net Total</td>
+                                                    <td style="background-color:#D9D9D9"></td>
+                                                    <td style="background-color:#D9D9D9"></td>
+                                                    <td style="background-color:#D9D9D9"><span t-field="o.amount_total"/></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="footer o_background_footer">
+                                    <div class="text-center">
+                                        <ul class="list-inline" style="color:#00B0F0 !important;">
+                                            <li t-if="res_company.phone" class="list-inline-item"><i class="fa fa-phone" role="img" aria-label="Phone" title="Phone"/> <span t-field="res_company.phone"/></li>
+                                            <li t-if="res_company.email" class="list-inline-item"><i class="fa fa-at" role="img" aria-label="Email" title="Email"/> <span t-field="res_company.email"/></li>
+                                            <li t-if="res_company.website" class="list-inline-item"><i class="fa fa-globe" role="img" aria-label="Website" title="Website"/> <span t-field="res_company.website"/></li>
+                                            <li class="list-inline-item"><i class="fa fa-map-marker" role="img" aria-label="Address" title="Address"/> <span>Iraq, Baghdad, Ameerat ST.</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div style="page-break-after: always;"/>
+                                <div>
+                                    <img src='/custom_printout_reports/static/src/img/invoice_header.JPG' style="width:125%; margin:0px 0px 0px 0px !important;" alt="invoice header"/>
+                                </div>
+                                <div  style="margin-top=60px !important; color:#00B0F0 !important">
+                                    <p  style='margin-left:0; margin-top: 25px !important; color:#00B0F0'>
+                                        <b>
+                                            <i>
+                                                <u>
+                                                    <span style='font-size:20.0pt; line-height:120%; font-family:"Times New Roman",serif; color:#00B0F0'>
+                                                        <br /><br /><br />Terms and conditions:
+                                                    </span>
+                                                </u>
+                                            </i>
+                                        </b>
+                                    </p>
+                                </div>
+                                <p  align="left">
+                                    1 – This offer was made for this client; a new offer will replace this offer in case of any modifications and changes.<br />
+                                    2- The proposed price does not include any other material or works not Mentioned in the offer. Please note it's possible while working, new Materials are needed therefor these extra materials will be charged separately from the proposed offers.<br />
+                                    2 – Delivery: within 15 working days.<br />
+                                    3 – Terms of payment: 60 % upon signing this offer, 40 % up on delivery.<br />
+                                    4 – Currency: US Dollars.<br />
+                                    6 - Validity: this offer is valid for 30 calendar days.<br />
+                                    8- Warranty: All equipment’s are guaranteed for one year against the cases Of poor manufacturing.<br /><br /><br /><br />
+                                    <b>
+                                        Approval: <br /> 
+                                        Client signature and stamp:................................. <br />
+                                        Date:<br />
+                                    </b>
+                                </p>
+                            </body>
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>
