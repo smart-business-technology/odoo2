@@ -1,0 +1,702 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* custom_printout_reports
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-11-17 02:49+0000\n"
+"PO-Revision-Date: 2020-11-17 02:49+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: custom_printout_reports
+#: model_terms:ir.ui.view,arch_db:custom_printout_reports.analytic_report_template
+msgid "0.0"
+msgstr ""
+
+#. module: custom_printout_reports
+#: model_terms:ir.ui.view,arch_db:custom_printout_reports.report_custom_invoice
+msgid "<b>Account Number : </b>"
+msgstr "رفم الحساب"
+
+#. module: custom_printout_reports
+#: model_terms:ir.ui.view,arch_db:custom_printout_reports.report_custom_invoice
+msgid "<b>Address : </b>"
+msgstr "الفرع/العنوان"
+
+#. module: custom_printout_reports
+#: model_terms:ir.ui.view,arch_db:custom_printout_reports.report_custom_invoice
+msgid "<b>Bank Account Info</b>"
+msgstr "تفـاصيل الحسـاي البنكي"
+
+#. module: custom_printout_reports
+#: model_terms:ir.ui.view,arch_db:custom_printout_reports.report_custom_invoice
+msgid "<b>Bank Code : </b>"
+msgstr "كود البنك"
+
+#. module: custom_printout_reports
+#: model_terms:ir.ui.view,arch_db:custom_printout_reports.report_custom_invoice
+msgid "<b>Bank Name : </b>"
+msgstr "اسم البنك"
+
+#. module: custom_printout_reports
+#: model_terms:ir.ui.view,arch_db:custom_printout_reports.report_custom_invoice
+msgid "<b>Currency : </b>"
+msgstr "العملة:"
+
+#. module: custom_printout_reports
+#: model_terms:ir.ui.view,arch_db:custom_printout_reports.report_custom_invoice
+msgid "<b>Customer Address : </b>"
+msgstr "عنوان العميل :"
+
+#. module: custom_printout_reports
+#: model_terms:ir.ui.view,arch_db:custom_printout_reports.report_custom_invoice
+msgid "<b>Customer Name : </b>"
+msgstr "إسم العميل :"
+
+#. module: custom_printout_reports
+#: model_terms:ir.ui.view,arch_db:custom_printout_reports.report_custom_invoice
+msgid "<b>Customer Phone : </b>"
+msgstr ""
+
+#. module: custom_printout_reports
+#: model_terms:ir.ui.view,arch_db:custom_printout_reports.report_custom_invoice
+msgid "<b>IBAN Number : </b>"
+msgstr ""
+
+#. module: custom_printout_reports
+#: model_terms:ir.ui.view,arch_db:custom_printout_reports.report_custom_invoice
+msgid "<b>Tax No : </b>"
+msgstr ""
+
+#. module: custom_printout_reports
+#: model_terms:ir.ui.view,arch_db:custom_printout_reports.report_custom_invoice
+msgid "<strong>Subtotal</strong>"
+msgstr "<strong>الإجمالي الفرعي</strong>"
+
+#. module: custom_printout_reports
+#: model_terms:ir.ui.view,arch_db:custom_printout_reports.report_custom_invoice
+msgid "<strong>Total</strong>"
+msgstr "<strong>الإجمالي</strong>"
+
+#. module: custom_printout_reports
+#: model_terms:ir.ui.view,arch_db:custom_printout_reports.report_custom_invoice
+msgid "<strong>Vat Amount</strong>"
+msgstr ""
+
+
+#. module: custom_printout_reports
+#: model:ir.model.fields,field_description:custom_printout_reports.field_analytic_report_wizard__account_ids
+#: model_terms:ir.ui.view,arch_db:custom_printout_reports.analytic_account_view_report
+msgid "Account"
+msgstr "الحساب"
+
+#. module: custom_printout_reports
+#: model:ir.model.fields,field_description:custom_printout_reports.field_analytic_report_wizard__account_parent_ids
+msgid "Account Parent"
+msgstr "الحساب الرئيـسي"
+
+#. module: custom_printout_reports
+#: model:ir.model,name:custom_printout_reports.model_aged_partner_balance_wizard
+msgid "Aged Partner Balance Wizard"
+msgstr "معالج ‫تحليل رصيد الشركاء"
+
+#. module: custom_printout_reports
+#: model:ir.model.fields,field_description:custom_printout_reports.field_analytic_report_wizard__analytic_ids
+#: model_terms:ir.ui.view,arch_db:custom_printout_reports.analytic_account_view_report
+msgid "Analytic Account"
+msgstr "الحساب التحليلي"
+
+#. module: custom_printout_reports
+#: model:ir.actions.act_window,name:custom_printout_reports.analytic_account_report_action
+#: model:ir.actions.report,name:custom_printout_reports.analytic_account_report
+#: model:ir.ui.menu,name:custom_printout_reports.analytic_account_report_menu
+msgid "Analytic Account Report"
+msgstr "تقـرير مـراكز التكـلفـة"
+
+#. module: custom_printout_reports
+#: model_terms:ir.ui.view,arch_db:custom_printout_reports.analytic_account_view_report
+#: model_terms:ir.ui.view,arch_db:custom_printout_reports.contract_debit_credit_form_view
+#: model_terms:ir.ui.view,arch_db:custom_printout_reports.contract_income_form_view
+#: model_terms:ir.ui.view,arch_db:custom_printout_reports.project_information_form_view
+#: model_terms:ir.ui.view,arch_db:custom_printout_reports.rent_payment_wizard_from_view
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: custom_printout_reports
+#: code:addons/account/custom_printout_reports/reports/oca/general_ledger.py:1224
+#: code:addons/custom_printout_reports/reports/oca/general_ledger.py:1224
+#, python-format
+msgid "Centralized Entries"
+msgstr ""
+
+#. module: custom_printout_reports
+#: model_terms:ir.ui.view,arch_db:custom_printout_reports.report_custom_invoice
+msgid "Claim No"
+msgstr "رقم المطالية"
+
+#. module: custom_printout_reports
+#: model:ir.actions.report,name:custom_printout_reports.invoice_custom_print
+msgid "Company Invoice"
+msgstr "الفـاتورة المـوحدة"
+
+#. module: custom_printout_reports
+#: model_terms:ir.ui.view,arch_db:custom_printout_reports.contract_debit_credit_form_view
+#: model_terms:ir.ui.view,arch_db:custom_printout_reports.rent_payment_wizard_from_view
+msgid "Contract"
+msgstr "عقد"
+
+#. module: custom_printout_reports
+#: code:addons/account/custom_printout_reports/wizard/report_wizard.py:95
+#: code:addons/custom_printout_reports/wizard/report_wizard.py:95
+#: model:ir.actions.report,name:custom_printout_reports.action_report_for_contract_debit_credit_xls
+#, python-format
+msgid "Contract Balances"
+msgstr "ملخـص مـديونيات العقـود"
+
+#. module: custom_printout_reports
+#: code:addons/account/custom_printout_reports/wizard/report_wizard.py:119
+#: code:addons/custom_printout_reports/wizard/report_wizard.py:119
+#: model:ir.actions.act_window,name:custom_printout_reports.contract_income_action
+#: model:ir.actions.report,name:custom_printout_reports.action_report_for_contract_income_xls
+#: model:ir.ui.menu,name:custom_printout_reports.contract_income_menu
+#, python-format
+msgid "Contract Income"
+msgstr "إيـرادات العقـود "
+
+#. module: custom_printout_reports
+#: model:ir.model.fields,field_description:custom_printout_reports.field_report_general_ledger_move_line__contract_name
+msgid "Contract Name"
+msgstr "العقـد"
+
+#. module: custom_printout_reports
+#: model:ir.actions.act_window,name:custom_printout_reports.contract_debit_credit_action
+#: model:ir.ui.menu,name:custom_printout_reports.contract_debit_credit_menu
+msgid "Contract indebtedness"
+msgstr "ملخـص مـديونيات العقـود"
+
+#. module: custom_printout_reports
+#: model:ir.model.fields,field_description:custom_printout_reports.field_contract_balance_wizard__contract_ids
+#: model:ir.model.fields,field_description:custom_printout_reports.field_rent_payment_wizard__contract_ids
+msgid "Contracts"
+msgstr "العقود"
+
+#. module: custom_printout_reports
+#: model:ir.model.fields,field_description:custom_printout_reports.field_analytic_report_wizard__create_uid
+#: model:ir.model.fields,field_description:custom_printout_reports.field_contract_balance_wizard__create_uid
+#: model:ir.model.fields,field_description:custom_printout_reports.field_contract_income_wizard__create_uid
+#: model:ir.model.fields,field_description:custom_printout_reports.field_project_report_wizard__create_uid
+#: model:ir.model.fields,field_description:custom_printout_reports.field_rent_payment_wizard__create_uid
+#: model:ir.model.fields,field_description:custom_printout_reports.field_report_custom_printout_reports_account_analytic_xls__create_uid
+#: model:ir.model.fields,field_description:custom_printout_reports.field_report_custom_printout_reports_contract_debit_credit_xls__create_uid
+#: model:ir.model.fields,field_description:custom_printout_reports.field_report_custom_printout_reports_contract_income_xls__create_uid
+#: model:ir.model.fields,field_description:custom_printout_reports.field_report_custom_printout_reports_project_report_xls__create_uid
+#: model:ir.model.fields,field_description:custom_printout_reports.field_report_custom_printout_reports_rent_payment_xls__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: custom_printout_reports
+#: model:ir.model.fields,field_description:custom_printout_reports.field_analytic_report_wizard__create_date
+#: model:ir.model.fields,field_description:custom_printout_reports.field_contract_balance_wizard__create_date
+#: model:ir.model.fields,field_description:custom_printout_reports.field_contract_income_wizard__create_date
+#: model:ir.model.fields,field_description:custom_printout_reports.field_project_report_wizard__create_date
+#: model:ir.model.fields,field_description:custom_printout_reports.field_rent_payment_wizard__create_date
+#: model:ir.model.fields,field_description:custom_printout_reports.field_report_custom_printout_reports_account_analytic_xls__create_date
+#: model:ir.model.fields,field_description:custom_printout_reports.field_report_custom_printout_reports_contract_debit_credit_xls__create_date
+#: model:ir.model.fields,field_description:custom_printout_reports.field_report_custom_printout_reports_contract_income_xls__create_date
+#: model:ir.model.fields,field_description:custom_printout_reports.field_report_custom_printout_reports_project_report_xls__create_date
+#: model:ir.model.fields,field_description:custom_printout_reports.field_report_custom_printout_reports_rent_payment_xls__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: custom_printout_reports
+#: selection:contract.balance.wizard,filter:0
+msgid "Date"
+msgstr "التـاريخ"
+
+#. module: custom_printout_reports
+#: model:ir.model.fields,field_description:custom_printout_reports.field_analytic_report_wizard__date_from
+#: model:ir.model.fields,field_description:custom_printout_reports.field_contract_balance_wizard__date_from
+#: model:ir.model.fields,field_description:custom_printout_reports.field_project_report_wizard__date_from
+#: model:ir.model.fields,field_description:custom_printout_reports.field_rent_payment_wizard__date_from
+msgid "Date From"
+msgstr "من تاريخ"
+
+#. module: custom_printout_reports
+#: model:ir.model.fields,field_description:custom_printout_reports.field_analytic_report_wizard__date_to
+#: model:ir.model.fields,field_description:custom_printout_reports.field_contract_balance_wizard__date_to
+#: model:ir.model.fields,field_description:custom_printout_reports.field_project_report_wizard__date_to
+#: model:ir.model.fields,field_description:custom_printout_reports.field_rent_payment_wizard__date_to
+msgid "Date To"
+msgstr "إلى تاريخ"
+
+
+#. module: custom_printout_reports
+#: model_terms:ir.ui.view,arch_db:custom_printout_reports.report_custom_invoice
+msgid "Date:"
+msgstr "التاريخ:"
+
+#. module: custom_printout_reports
+#: model_terms:ir.ui.view,arch_db:custom_printout_reports.contract_debit_credit_form_view
+msgid "Dates"
+msgstr "التواريخ"
+
+#. module: custom_printout_reports
+#: model_terms:ir.ui.view,arch_db:custom_printout_reports.report_custom_invoice
+msgid "Description"
+msgstr "الوصف"
+
+#. module: custom_printout_reports
+#: model:ir.model.fields,field_description:custom_printout_reports.field_analytic_report_wizard__display_name
+#: model:ir.model.fields,field_description:custom_printout_reports.field_contract_balance_wizard__display_name
+#: model:ir.model.fields,field_description:custom_printout_reports.field_contract_income_wizard__display_name
+#: model:ir.model.fields,field_description:custom_printout_reports.field_project_report_wizard__display_name
+#: model:ir.model.fields,field_description:custom_printout_reports.field_rent_payment_wizard__display_name
+#: model:ir.model.fields,field_description:custom_printout_reports.field_report_custom_printout_reports_account_analytic_xls__display_name
+#: model:ir.model.fields,field_description:custom_printout_reports.field_report_custom_printout_reports_analytic_report_template__display_name
+#: model:ir.model.fields,field_description:custom_printout_reports.field_report_custom_printout_reports_contract_debit_credit_xls__display_name
+#: model:ir.model.fields,field_description:custom_printout_reports.field_report_custom_printout_reports_contract_income_xls__display_name
+#: model:ir.model.fields,field_description:custom_printout_reports.field_report_custom_printout_reports_project_report_xls__display_name
+#: model:ir.model.fields,field_description:custom_printout_reports.field_report_custom_printout_reports_rent_payment_xls__display_name
+msgid "Display Name"
+msgstr "اسم العرض"
+
+#. module: custom_printout_reports
+#: model:ir.model.fields,field_description:custom_printout_reports.field_contract_balance_wizard__period_to
+msgid "End Period"
+msgstr "فتـرة النهـاية"
+
+#. module: custom_printout_reports
+#: model_terms:ir.ui.view,arch_db:custom_printout_reports.analytic_account_view_report
+#: model_terms:ir.ui.view,arch_db:custom_printout_reports.contract_debit_credit_form_view
+#: model_terms:ir.ui.view,arch_db:custom_printout_reports.contract_income_form_view
+#: model_terms:ir.ui.view,arch_db:custom_printout_reports.project_information_form_view
+#: model_terms:ir.ui.view,arch_db:custom_printout_reports.rent_payment_wizard_from_view
+msgid "Export Excel"
+msgstr "تصـدير إكسل"
+
+#. module: custom_printout_reports
+#: model:ir.model.fields,field_description:custom_printout_reports.field_contract_balance_wizard__filter
+#: model:ir.model.fields,field_description:custom_printout_reports.field_contract_income_wizard__filter
+msgid "Filter"
+msgstr "المرشحات"
+
+#. module: custom_printout_reports
+#: model:ir.model.fields,field_description:custom_printout_reports.field_report_aged_partner_balance__filter_contract_ids
+#: model:ir.model.fields,field_description:custom_printout_reports.field_report_general_ledger__filter_contract_ids
+#: model:ir.model.fields,field_description:custom_printout_reports.field_report_open_items__filter_contract_ids
+#: model:ir.model.fields,field_description:custom_printout_reports.field_report_trial_balance__filter_contract_ids
+msgid "Filter Contract"
+msgstr "العقـود"
+
+#. module: custom_printout_reports
+#: model:ir.model.fields,field_description:custom_printout_reports.field_aged_partner_balance_wizard__contract_ids
+#: model:ir.model.fields,field_description:custom_printout_reports.field_general_ledger_report_wizard__contract_ids
+#: model:ir.model.fields,field_description:custom_printout_reports.field_open_items_report_wizard__contract_ids
+#: model:ir.model.fields,field_description:custom_printout_reports.field_trial_balance_report_wizard__contract_ids
+#: model_terms:ir.ui.view,arch_db:custom_printout_reports.aged_partner_balance_wizard_inherit
+#: model_terms:ir.ui.view,arch_db:custom_printout_reports.general_ledger_wizard_inherit
+#: model_terms:ir.ui.view,arch_db:custom_printout_reports.open_items_wizard_inherit
+#: model_terms:ir.ui.view,arch_db:custom_printout_reports.trial_balance_wizard_inherit
+msgid "Filter Contracts"
+msgstr "العقـود"
+
+#. module: custom_printout_reports
+#: model:ir.model.fields,field_description:custom_printout_reports.field_contract_income_wizard__period_ids
+msgid "Fiscal Period"
+msgstr "الفتـرة المـالية"
+
+#. module: custom_printout_reports
+#: model:ir.model.fields,field_description:custom_printout_reports.field_contract_income_wizard__fiscal_year
+msgid "Fiscal Year"
+msgstr "السنـة المـالية"
+
+#. module: custom_printout_reports
+#: model:ir.model,name:custom_printout_reports.model_general_ledger_report_wizard
+msgid "General Ledger Report Wizard"
+msgstr "الأسـتاذ العـام"
+
+#. module: custom_printout_reports
+#: model:ir.model.fields,field_description:custom_printout_reports.field_analytic_report_wizard__id
+#: model:ir.model.fields,field_description:custom_printout_reports.field_contract_balance_wizard__id
+#: model:ir.model.fields,field_description:custom_printout_reports.field_contract_income_wizard__id
+#: model:ir.model.fields,field_description:custom_printout_reports.field_project_report_wizard__id
+#: model:ir.model.fields,field_description:custom_printout_reports.field_rent_payment_wizard__id
+#: model:ir.model.fields,field_description:custom_printout_reports.field_report_custom_printout_reports_account_analytic_xls__id
+#: model:ir.model.fields,field_description:custom_printout_reports.field_report_custom_printout_reports_analytic_report_template__id
+#: model:ir.model.fields,field_description:custom_printout_reports.field_report_custom_printout_reports_contract_debit_credit_xls__id
+#: model:ir.model.fields,field_description:custom_printout_reports.field_report_custom_printout_reports_contract_income_xls__id
+#: model:ir.model.fields,field_description:custom_printout_reports.field_report_custom_printout_reports_project_report_xls__id
+#: model:ir.model.fields,field_description:custom_printout_reports.field_report_custom_printout_reports_rent_payment_xls__id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: custom_printout_reports
+#: model_terms:ir.ui.view,arch_db:custom_printout_reports.report_custom_invoice
+msgid "Invoice"
+msgstr "الفاتورة"
+
+#. module: custom_printout_reports
+#: model_terms:ir.ui.view,arch_db:custom_printout_reports.rent_payment_wizard_from_view
+msgid "Invoicing"
+msgstr "الفوترة"
+
+#. module: custom_printout_reports
+#: model:ir.model.fields,field_description:custom_printout_reports.field_rent_payment_wizard__invoiced
+msgid "Just Invoiced Payment"
+msgstr "التي لهـا فواتير"
+
+#. module: custom_printout_reports
+#: model:ir.model.fields,field_description:custom_printout_reports.field_analytic_report_wizard____last_update
+#: model:ir.model.fields,field_description:custom_printout_reports.field_contract_balance_wizard____last_update
+#: model:ir.model.fields,field_description:custom_printout_reports.field_contract_income_wizard____last_update
+#: model:ir.model.fields,field_description:custom_printout_reports.field_project_report_wizard____last_update
+#: model:ir.model.fields,field_description:custom_printout_reports.field_rent_payment_wizard____last_update
+#: model:ir.model.fields,field_description:custom_printout_reports.field_report_custom_printout_reports_account_analytic_xls____last_update
+#: model:ir.model.fields,field_description:custom_printout_reports.field_report_custom_printout_reports_analytic_report_template____last_update
+#: model:ir.model.fields,field_description:custom_printout_reports.field_report_custom_printout_reports_contract_debit_credit_xls____last_update
+#: model:ir.model.fields,field_description:custom_printout_reports.field_report_custom_printout_reports_contract_income_xls____last_update
+#: model:ir.model.fields,field_description:custom_printout_reports.field_report_custom_printout_reports_project_report_xls____last_update
+#: model:ir.model.fields,field_description:custom_printout_reports.field_report_custom_printout_reports_rent_payment_xls____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: custom_printout_reports
+#: model:ir.model.fields,field_description:custom_printout_reports.field_analytic_report_wizard__write_uid
+#: model:ir.model.fields,field_description:custom_printout_reports.field_contract_balance_wizard__write_uid
+#: model:ir.model.fields,field_description:custom_printout_reports.field_contract_income_wizard__write_uid
+#: model:ir.model.fields,field_description:custom_printout_reports.field_project_report_wizard__write_uid
+#: model:ir.model.fields,field_description:custom_printout_reports.field_rent_payment_wizard__write_uid
+#: model:ir.model.fields,field_description:custom_printout_reports.field_report_custom_printout_reports_account_analytic_xls__write_uid
+#: model:ir.model.fields,field_description:custom_printout_reports.field_report_custom_printout_reports_contract_debit_credit_xls__write_uid
+#: model:ir.model.fields,field_description:custom_printout_reports.field_report_custom_printout_reports_contract_income_xls__write_uid
+#: model:ir.model.fields,field_description:custom_printout_reports.field_report_custom_printout_reports_project_report_xls__write_uid
+#: model:ir.model.fields,field_description:custom_printout_reports.field_report_custom_printout_reports_rent_payment_xls__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: custom_printout_reports
+#: model:ir.model.fields,field_description:custom_printout_reports.field_analytic_report_wizard__write_date
+#: model:ir.model.fields,field_description:custom_printout_reports.field_contract_balance_wizard__write_date
+#: model:ir.model.fields,field_description:custom_printout_reports.field_contract_income_wizard__write_date
+#: model:ir.model.fields,field_description:custom_printout_reports.field_project_report_wizard__write_date
+#: model:ir.model.fields,field_description:custom_printout_reports.field_rent_payment_wizard__write_date
+#: model:ir.model.fields,field_description:custom_printout_reports.field_report_custom_printout_reports_account_analytic_xls__write_date
+#: model:ir.model.fields,field_description:custom_printout_reports.field_report_custom_printout_reports_contract_debit_credit_xls__write_date
+#: model:ir.model.fields,field_description:custom_printout_reports.field_report_custom_printout_reports_contract_income_xls__write_date
+#: model:ir.model.fields,field_description:custom_printout_reports.field_report_custom_printout_reports_project_report_xls__write_date
+#: model:ir.model.fields,field_description:custom_printout_reports.field_report_custom_printout_reports_rent_payment_xls__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: custom_printout_reports
+#: code:addons/account/custom_printout_reports/reports/oca/general_ledger.py:494
+#: code:addons/account/custom_printout_reports/reports/oca/general_ledger.py:902
+#: code:addons/account/custom_printout_reports/reports/oca/open_items.py:157
+#: code:addons/account/custom_printout_reports/reports/oca/open_items.py:337
+#: code:addons/custom_printout_reports/reports/oca/general_ledger.py:494
+#: code:addons/custom_printout_reports/reports/oca/general_ledger.py:902
+#: code:addons/custom_printout_reports/reports/oca/open_items.py:157
+#: code:addons/custom_printout_reports/reports/oca/open_items.py:337
+#, python-format
+msgid "No partner allocated"
+msgstr ""
+
+#. module: custom_printout_reports
+#: model:ir.model,name:custom_printout_reports.model_open_items_report_wizard
+msgid "Open Items Report Wizard"
+msgstr "الدفعات الميتحقة"
+
+#. module: custom_printout_reports
+#: model_terms:ir.ui.view,arch_db:custom_printout_reports.analytic_account_view_report
+msgid "Parent"
+msgstr "الحسابات الرئيسية"
+
+#. module: custom_printout_reports
+#: model:ir.model.fields,field_description:custom_printout_reports.field_contract_balance_wizard__partner_ids
+#: model:ir.model.fields,field_description:custom_printout_reports.field_rent_payment_wizard__partner_ids
+#: model_terms:ir.ui.view,arch_db:custom_printout_reports.contract_debit_credit_form_view
+#: model_terms:ir.ui.view,arch_db:custom_printout_reports.rent_payment_wizard_from_view
+msgid "Partner"
+msgstr "المستفيد"
+
+#. module: custom_printout_reports
+#: model:ir.actions.report,name:custom_printout_reports.rent_payment_request_report
+msgid "Payment Request"
+msgstr ""
+
+#. module: custom_printout_reports
+#: model_terms:ir.ui.view,arch_db:custom_printout_reports.analytic_account_view_report
+#: model_terms:ir.ui.view,arch_db:custom_printout_reports.contract_income_form_view
+#: model_terms:ir.ui.view,arch_db:custom_printout_reports.rent_payment_wizard_from_view
+msgid "Period"
+msgstr "فترة"
+
+#. module: custom_printout_reports
+#: selection:contract.balance.wizard,filter:0
+#: model_terms:ir.ui.view,arch_db:custom_printout_reports.contract_debit_credit_form_view
+msgid "Periods"
+msgstr "الفتـرة"
+
+#. module: custom_printout_reports
+#: model_terms:ir.ui.view,arch_db:custom_printout_reports.analytic_account_view_report
+msgid "Print"
+msgstr "طباعة"
+
+#. module: custom_printout_reports
+#: model:ir.actions.report,name:custom_printout_reports.report_payment_receipt_report
+msgid "Print Vouchers"
+msgstr "الـسند الموحـد"
+
+#. module: custom_printout_reports
+#: code:addons/account/custom_printout_reports/reports/price_offer.py:38
+#: code:addons/account/custom_printout_reports/wizard/confirm_wizard.py:20
+#: code:addons/custom_printout_reports/reports/price_offer.py:38
+#: code:addons/custom_printout_reports/wizard/confirm_wizard.py:20
+#, python-format
+msgid "Programming error: wizard action executed without active_id in context."
+msgstr ""
+
+#. module: custom_printout_reports
+#: code:addons/account/custom_printout_reports/wizard/report_wizard.py:141
+#: code:addons/custom_printout_reports/wizard/report_wizard.py:141
+#: model:ir.actions.act_window,name:custom_printout_reports.project_information_action
+#: model:ir.actions.report,name:custom_printout_reports.action_report_for_project_report_xls
+#: model:ir.ui.menu,name:custom_printout_reports.project_information_menu
+#, python-format
+msgid "Project Report"
+msgstr ""
+
+#. module: custom_printout_reports
+#: model:ir.model.fields,field_description:custom_printout_reports.field_project_report_wizard__project_ids
+msgid "Projects Information"
+msgstr ""
+
+#. module: custom_printout_reports
+#: model:ir.model.fields,field_description:custom_printout_reports.field_contract_balance_wizard__property_ids
+#: model:ir.model.fields,field_description:custom_printout_reports.field_rent_payment_wizard__property_ids
+#: model_terms:ir.ui.view,arch_db:custom_printout_reports.contract_debit_credit_form_view
+#: model_terms:ir.ui.view,arch_db:custom_printout_reports.rent_payment_wizard_from_view
+msgid "Property"
+msgstr "العقار"
+
+#. module: custom_printout_reports
+#: model:ir.ui.menu,name:custom_printout_reports.menu_action_account_property_report
+msgid "Property Reports"
+msgstr "تقـارير العقـارات"
+
+#. module: custom_printout_reports
+#: selection:contract.income.wizard,filter:0
+msgid "Rent & Service Payment"
+msgstr "دفعة الإيجار والخدمات"
+
+#. module: custom_printout_reports
+#: selection:contract.income.wizard,filter:0
+msgid "Rent Payment"
+msgstr "دفعة إيجار"
+
+#. module: custom_printout_reports
+#: model:ir.ui.menu,name:custom_printout_reports.rent_payment_wizard_report_menu
+msgid "Rent Payment Claims"
+msgstr "المطـالبات المـالية"
+
+#. module: custom_printout_reports
+#: code:addons/account/custom_printout_reports/wizard/report_wizard.py:53
+#: code:addons/custom_printout_reports/wizard/report_wizard.py:53
+#: model:ir.actions.act_window,name:custom_printout_reports.rent_payment_wizard_action
+#: model:ir.actions.report,name:custom_printout_reports.action_report_for_rent_payment_xls
+#, python-format
+msgid "Rent Payment Report"
+msgstr "المطـالبات المـالية"
+
+#. module: custom_printout_reports
+#: selection:contract.income.wizard,filter:0
+msgid "Service Payment"
+msgstr "دفعة خدمـات"
+
+#. module: custom_printout_reports
+#: model:ir.model.fields,field_description:custom_printout_reports.field_contract_balance_wizard__period_from
+msgid "Start Period"
+msgstr "فترة البـداية"
+
+#. module: custom_printout_reports
+#: model:ir.actions.report,name:custom_printout_reports.action_report_for_analytic_xlsx
+msgid "Statement Of Analytic  Report"
+msgstr ""
+
+#. module: custom_printout_reports
+#: model_terms:ir.ui.view,arch_db:custom_printout_reports.report_custom_invoice
+msgid "Subtotal"
+msgstr "الإجمالي الفرعي"
+
+#. module: custom_printout_reports
+#: code:addons/account/custom_printout_reports/reports/analytica_account_xlsx.py:134
+#: code:addons/account/custom_printout_reports/wizard/analytic_account_wizard.py:136
+#: code:addons/custom_printout_reports/reports/analytica_account_xlsx.py:134
+#: code:addons/custom_printout_reports/wizard/analytic_account_wizard.py:136
+#, python-format
+msgid "There is no data with the giving information"
+msgstr "لا توجد معلومات"
+
+#. module: custom_printout_reports
+#: code:addons/account/custom_printout_reports/wizard/analytic_account_wizard.py:56
+#: code:addons/custom_printout_reports/wizard/analytic_account_wizard.py:56
+#, python-format
+msgid "There is no record in given data"
+msgstr "لا توجد معلومات"
+
+#. module: custom_printout_reports
+#: code:addons/account/custom_printout_reports/wizard/confirm_wizard.py:18
+#: code:addons/custom_printout_reports/wizard/confirm_wizard.py:18
+#, python-format
+msgid "This Financial Clim Printed More Than One Time And Attached do you to attatch this verson ?"
+msgstr ""
+
+#. module: custom_printout_reports
+#: model_terms:ir.ui.view,arch_db:custom_printout_reports.report_custom_invoice
+msgid "Total"
+msgstr "الإجمالي"
+
+#. module: custom_printout_reports
+#: model:ir.actions.report,name:custom_printout_reports.account_report_trial_action
+msgid "Trial Balance"
+msgstr "ميـزان المـراجعة"
+
+#. module: custom_printout_reports
+#: model:ir.model,name:custom_printout_reports.model_trial_balance_report_wizard
+msgid "Trial Balance Report Wizard"
+msgstr "ميـزان المـراجعة"
+
+#. module: custom_printout_reports
+#: model_terms:ir.ui.view,arch_db:custom_printout_reports.report_custom_invoice
+msgid "VAT"
+msgstr "الضريبة"
+
+#. module: custom_printout_reports
+#: model_terms:ir.ui.view,arch_db:custom_printout_reports.report_custom_invoice
+msgid "Vat Amount"
+msgstr ""
+
+#. module: custom_printout_reports
+#: model_terms:ir.ui.view,arch_db:custom_printout_reports.report_custom_invoice
+msgid "Vat No :"
+msgstr ""
+
+#. module: custom_printout_reports
+#: code:addons/account/custom_printout_reports/reports/report_rent_payment_request.py:39
+#: code:addons/custom_printout_reports/reports/report_rent_payment_request.py:39
+#, python-format
+msgid "You can not delete the following attachment"
+msgstr ""
+
+#. module: custom_printout_reports
+#: model:ir.model,name:custom_printout_reports.model_analytic_report_wizard
+msgid "analytic.report.wizard"
+msgstr ""
+
+#. module: custom_printout_reports
+#: model:ir.model,name:custom_printout_reports.model_contract_balance_wizard
+msgid "contract.balance.wizard"
+msgstr ""
+
+#. module: custom_printout_reports
+#: model:ir.model,name:custom_printout_reports.model_contract_income_wizard
+msgid "contract.income.wizard"
+msgstr ""
+
+#. module: custom_printout_reports
+#: model:ir.model,name:custom_printout_reports.model_project_report_wizard
+msgid "project.report.wizard"
+msgstr ""
+
+#. module: custom_printout_reports
+#: model:ir.model,name:custom_printout_reports.model_rent_payment_wizard
+msgid "rent.payment.wizard"
+msgstr ""
+
+#. module: custom_printout_reports
+#: model:ir.model,name:custom_printout_reports.model_report_custom_printout_reports_account_analytic_xls
+msgid "report.custom_printout_reports.account_analytic_xls"
+msgstr ""
+
+#. module: custom_printout_reports
+#: model:ir.model,name:custom_printout_reports.model_report_custom_printout_reports_analytic_report_template
+msgid "report.custom_printout_reports.analytic_report_template"
+msgstr ""
+
+#. module: custom_printout_reports
+#: model:ir.model,name:custom_printout_reports.model_report_custom_printout_reports_contract_debit_credit_xls
+msgid "report.custom_printout_reports.contract_debit_credit_xls"
+msgstr ""
+
+#. module: custom_printout_reports
+#: model:ir.model,name:custom_printout_reports.model_report_custom_printout_reports_contract_income_xls
+msgid "report.custom_printout_reports.contract_income_xls"
+msgstr ""
+
+#. module: custom_printout_reports
+#: model:ir.model,name:custom_printout_reports.model_report_custom_printout_reports_project_report_xls
+msgid "report.custom_printout_reports.project_report_xls"
+msgstr ""
+
+#. module: custom_printout_reports
+#: model:ir.model,name:custom_printout_reports.model_report_custom_printout_reports_rent_payment_xls
+msgid "report.custom_printout_reports.rent_payment_xls"
+msgstr ""
+
+#. module: custom_printout_reports
+#: model:ir.model,name:custom_printout_reports.model_report_aged_partner_balance
+msgid "report_aged_partner_balance"
+msgstr ""
+
+#. module: custom_printout_reports
+#: model:ir.model,name:custom_printout_reports.model_report_general_ledger
+msgid "report_general_ledger"
+msgstr ""
+
+#. module: custom_printout_reports
+#: model:ir.model,name:custom_printout_reports.model_report_general_ledger_move_line
+msgid "report_general_ledger_move_line"
+msgstr ""
+
+#. module: custom_printout_reports
+#: model:ir.model,name:custom_printout_reports.model_report_open_items
+msgid "report_open_items"
+msgstr ""
+
+#. module: custom_printout_reports
+#: model:ir.model,name:custom_printout_reports.model_report_trial_balance
+msgid "report_trial_balance"
+msgstr ""
+
+#. module: custom_printout_reports
+#: model_terms:ir.ui.view,arch_db:custom_printout_reports.analytic_report_template
+msgid "الأجمالي"
+msgstr ""
+
+#. module: custom_printout_reports
+#: model_terms:ir.ui.view,arch_db:custom_printout_reports.analytic_report_template
+msgid "الحساب المالي"
+msgstr ""
+
+#. module: custom_printout_reports
+#: model_terms:ir.ui.view,arch_db:custom_printout_reports.analytic_report_template
+msgid "الحسابات التحليلية"
+msgstr ""
+
+#. module: custom_printout_reports
+#: model_terms:ir.ui.view,arch_db:custom_printout_reports.analytic_report_template
+msgid "رقم الحساب"
+msgstr ""
+
+#. module: custom_printout_reports
+#: model_terms:ir.ui.view,arch_db:custom_printout_reports.analytic_report_template
+msgid "غير محدد"
+msgstr ""
+
